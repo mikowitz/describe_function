@@ -1,12 +1,12 @@
 defmodule DescribeFunction.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
   @maintainers [
     "Michael Berkowitz"
   ]
   @links %{
-    github: "https://github.com/mikowitz/graphvix"
+    github: "https://github.com/mikowitz/describe_function"
   }
 
   def project do
