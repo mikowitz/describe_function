@@ -1,6 +1,6 @@
-# DescribeFunc
+# DescribeFunction
 
-Inspired by a [conversation on Twitter][twitter], `DescribeFunc` adds an
+Inspired by a [conversation on Twitter][twitter], `DescribeFunction` adds an
 additional layer of TDD to your Elixir application.
 
 ## Usage
@@ -9,9 +9,9 @@ additional layer of TDD to your Elixir application.
 defmodule ExampleTest do
   use ExUnit.Case, asnyc: true
 
-  import DescribeFunc
+  import DescribeFunction
 
-  describe_func &Example.hello_world/0 do
+  describe_function &Example.hello_world/0 do
     test "hello_world functions as expected" do
       assert Example.hello_world() == "hello world"
     end
@@ -24,10 +24,10 @@ or fail, based on its implementation. On the other hand, if `Example.hello_world
 is undefined, running your tests will raise
 
 ```elixir
-** (DescribeFunc.UndefinedFunctionError) function not defined: &Example.hello_world/0
+** (DescribeFunction.UndefinedFunctionError) function not defined: &Example.hello_world/0
 ```
 
-The `describe_func/2` macro validates that the function you are testing is
+The `describe_function/2` macro validates that the function you are testing is
 defined. This will catch untested changes to your application's API at a high
 level in your test suite, resulting in a single, straightforward error, rather
 than many errors that might occur at a more removed level of your API.
@@ -35,18 +35,18 @@ than many errors that might occur at a more removed level of your API.
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `describe_func` to your list of dependencies in `mix.exs`:
+by adding `describe_function` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:describe_func, "~> 0.1.0"}
+    {:describe_function, "~> 0.1.0"}
   ]
 end
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/describe_func>.
+be found at <https://hexdocs.pm/describe_function>.
 
 [twitter]: https://twitter.com/zorn/status/1572788455507374082

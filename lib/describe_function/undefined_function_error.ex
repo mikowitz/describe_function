@@ -1,4 +1,4 @@
-defmodule DescribeFunc.UndefinedFunctionError do
+defmodule DescribeFunction.UndefinedFunctionError do
   defexception message: "function not defined: "
 
   def for_function(f) when is_function(f) do
